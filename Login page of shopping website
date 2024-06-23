@@ -1,0 +1,67 @@
+<!-- LoginPage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page in HTML</title>
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+  <p style="background-color: red; font-size: large;">ayush bante nagra</p>
+    <form method="post" action="start1.html">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3 style="font-size: 24px;">Login in</h3>
+            <p>login with your email and password</p>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="email">Your email</label>
+            <input id="e1" type="text" placeholder="Enter Email" name="username" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="pswrd">Your password</label>
+            <input id="e2" type="password" placeholder="Enter Password" name="pswrd" required>
+
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox" name="remember" > Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+
+
+            <!-- Submit button -->
+            <button type="submit" id="b1" onclick="create()">Login</button >
+
+            <!-- Sign up link -->
+            <p class="register">Not a member? <a href="#" onclick="window.location.href='Home.html'">Register here!</a></p>
+
+        </div>
+
+    </form>
+
+    <!-- javascript -->
+<div id="email" style="color: red;background-color: transparent;position: absolute;bottom: 9%;left: 142px;font-family: monospace;"></div>
+    <script type="text/javascript">
+    
+        function create()
+       {
+         var e=document.getElementById("e1").value;
+         var email_val=/\S+@\S+\.\S+/;
+         if(!email_val.test(e))
+         {
+           document.getElementById("email").innerHTML = "Please enter valid email.";
+         }
+         
+       }
+     </script>
+</body>
+</html>
