@@ -1,0 +1,93 @@
+<!-- Home Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  </head>
+
+
+  <body onload="CheckConnectionStatus()" >
+      <button id="login" class=" bg-gray-100 border-0 py-1 px-3 
+      rounded " onclick="window.location.href='Login page.html';">Log-in</button>
+      <br><br><br><br><br><br><br><br><br><br><br>
+<!-- Headings for the form -->
+<div class="headingsContainer">
+  <h1 style="font-size: 72px;font-family: Arial;font-weight: bolder;color: #ffffff; text-shadow: 0 0 23px red;position: relative;bottom: 38%;left: 11%;">Let's explore from More</h1>
+      <p style="color: lightslategray;font-family: revert;font-size: 19px;position: relative;text-align: left;left: 16%;">
+        Harnessed for productivity. Designed for buying collest <br>
+        Products Best deals with low price. Welcome to the platform <br>
+        Tech lovers.</p>
+</div><br><br>
+
+<!-- Main container for all inputs -->
+<div class="mainContainer" style="position: relative;left:24%;">
+  <input id="e1" class="textbox" type="text" placeholder="Email address" ><input class="b1" type="button" id="btn" onclick="create()" value="Confirm">
+    <div class="emailerror" id="empty"></div>
+    <div class="emailerror" id="email"></div><br>
+  
+<input id="p1" class="textbox" type="password" placeholder="Generate Password" name="pswrd"><input class="b1" id="btn1" onclick="password()"  type="button" value="Confirm">
+</div>
+<!-- javascript -->
+
+<div id="empty2" style="color: red;position: relative;left: 24%;font-family: monospace;"></div>
+<div id="sucess" style="color: red;"></div>
+
+<script type="text/javascript">
+  // Script for email
+function create()
+  {
+    var e=document.getElementById("e1").value;
+    var email_val=/\S+@\S+\.\S+/;
+    if(e=="")
+    {
+      document.getElementById("empty").innerHTML = "/-Enter email first !!";
+      
+    }
+    else if(!email_val.test(e))
+    {
+      document.getElementById("email").innerHTML = "/-Please enter valid email.";
+    }
+    else
+    {
+      document.getElementById("btn").value="Confirmed";
+      document.getElementById('btn').style.backgroundColor = 'Gray';
+      document.getElementById('btn').style.color = 'white';
+      document.getElementById('btn').style.border = 'solid 1px greenyellow';
+      document.getElementById('e1').style.border = 'solid 1px greenyellow';
+    }
+  }
+  // Script for password
+  function password()
+  {
+    var p=document.getElementById("p1").value;
+    if(p=="")
+    {
+      document.getElementById("empty2").innerHTML="/-Generate password First !!";
+    }
+    else
+    {
+      document.getElementById("btn1").value="Confirmed";
+      document.getElementById('btn1').style.backgroundColor = 'Gray';
+      document.getElementById('btn1').style.color = 'white';
+      document.getElementById('btn1').style.border = 'solid 1px greenyellow';
+      document.getElementById('p1').style.border = 'solid 1px greenyellow';
+      window.location="start1.html";
+    }
+  }
+</script>
+
+  <!-- Script for check online/offline  -->
+<script type="text/javascript">
+  function CheckConnectionStatus()
+  {
+    if(navigator.onLine)
+    {}
+    else
+    {alert("Please Connect to Internet !!!")
+      window.close();
+    }
+  }
+</script>
+</body>
+</html>
