@@ -1,0 +1,112 @@
+<!-- 3rd Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  
+  <style>
+      #price
+      {
+        color: rgb(252, 96, 6);
+        font-size: 23px;
+        left: 405px;
+        top: 400px;
+        position: absolute;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      #button
+      {
+        background-color:rgba(102,126,234,var(--bg-opacity));
+        color:rgba(255,255,255,var(--text-opacity));
+        border-radius: 5px;
+      }
+      #button:active
+      {
+        transform: scale(0.98);   
+        background-color: gray;
+      }
+      #buynow
+      {
+        background-color: #959595;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        color: whitesmoke;
+      }
+      #buynow:active
+      {
+        transform: scale(0.98);    
+        background-color:gray;
+        color: whitesmoke;
+      }
+      #icon
+      {color: rgb(0, 0, 0);font-size: 25px;float: right;padding: 20px;}
+      #icon:active
+      {transform: scale(0.98);color: gray;}
+    </style>
+  </head>
+<body>
+  <form name="f1" method="get" action="cart.p"></form>
+      <!-- L A P T O P'S -->
+    <i name="cart" class="fa-solid fa-cart-shopping" id="icon"></i>   
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">Laptops That Bring Out the Best In You</h1>
+      <p id="lg:w-2/3 mx-auto leading-relaxed text-base">While tablets and smartphones are still popular, most people agree that everything, from doing research for an assignment to playing hardcore games, works better on a laptop. It doesn't matter what your lifestyle is, there is always one for you.</p>
+    </div>
+
+    
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center., sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="Asus-X14-Space-Edition.webp">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900"><a href="assus zenbook.html">Asus ZenBook 14X Space Edition</a></h2>
+            <h3 class="text-gray-500 mb-3">Designed For The Space-Age</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">
+        </div>
+        </div>
+      </div>
+
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="Pavillion.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900"><a href="HP Pavillion.html">HP Pavilion Aero 2021</a></h2>
+            <h3 class="text-gray-500 mb-3">Portability Without Performance Sacrifices</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">          </div>
+        </div>
+      </div>
+
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="Lenovo_Legion_7_2021_COver.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">Lenovo Legion 7 2021</h2>
+            <h3 class="text-gray-500 mb-3">Delivering Total Perfection</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">          </div>
+        </div>
+      </div>
+
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="HP_Spetre_X360_Cover.webp">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">HP Spectre X360</h2>
+            <h3 class="text-gray-500 mb-3">Still Carrying The Bond Factor</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
