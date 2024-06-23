@@ -1,0 +1,405 @@
+<!-- Home Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  </head>
+
+
+  <body onload="CheckConnectionStatus()" >
+      <button id="login" class=" bg-gray-100 border-0 py-1 px-3 
+      rounded " onclick="window.location.href='Login page.html';">Log-in</button>
+      <br><br><br><br><br><br><br><br><br><br><br>
+<!-- Headings for the form -->
+<div class="headingsContainer">
+  <h1 style="font-size: 72px;font-family: Arial;font-weight: bolder;color: #ffffff; text-shadow: 0 0 23px red;position: relative;bottom: 38%;left: 11%;">Let's explore from More</h1>
+      <p style="color: lightslategray;font-family: revert;font-size: 19px;position: relative;text-align: left;left: 16%;">
+        Harnessed for productivity. Designed for buying collest <br>
+        Products Best deals with low price. Welcome to the platform <br>
+        Tech lovers.</p>
+</div><br><br>
+
+<!-- Main container for all inputs -->
+<div class="mainContainer" style="position: relative;left:24%;">
+  <input id="e1" class="textbox" type="text" placeholder="Email address" ><input class="b1" type="button" id="btn" onclick="create()" value="Confirm">
+    <div class="emailerror" id="empty"></div>
+    <div class="emailerror" id="email"></div><br>
+  
+<input id="p1" class="textbox" type="password" placeholder="Generate Password" name="pswrd"><input class="b1" id="btn1" onclick="password()"  type="button" value="Confirm">
+</div>
+<!-- javascript -->
+
+<div id="empty2" style="color: red;position: relative;left: 24%;font-family: monospace;"></div>
+<div id="sucess" style="color: red;"></div>
+
+<script type="text/javascript">
+  // Script for email
+function create()
+  {
+    var e=document.getElementById("e1").value;
+    var email_val=/\S+@\S+\.\S+/;
+    if(e=="")
+    {
+      document.getElementById("empty").innerHTML = "/-Enter email first !!";
+      
+    }
+    else if(!email_val.test(e))
+    {
+      document.getElementById("email").innerHTML = "/-Please enter valid email.";
+    }
+    else
+    {
+      document.getElementById("btn").value="Confirmed";
+      document.getElementById('btn').style.backgroundColor = 'Gray';
+      document.getElementById('btn').style.color = 'white';
+      document.getElementById('btn').style.border = 'solid 1px greenyellow';
+      document.getElementById('e1').style.border = 'solid 1px greenyellow';
+    }
+  }
+  // Script for password
+  function password()
+  {
+    var p=document.getElementById("p1").value;
+    if(p=="")
+    {
+      document.getElementById("empty2").innerHTML="/-Generate password First !!";
+    }
+    else
+    {
+      document.getElementById("btn1").value="Confirmed";
+      document.getElementById('btn1').style.backgroundColor = 'Gray';
+      document.getElementById('btn1').style.color = 'white';
+      document.getElementById('btn1').style.border = 'solid 1px greenyellow';
+      document.getElementById('p1').style.border = 'solid 1px greenyellow';
+      window.location="start1.html";
+    }
+  }
+</script>
+
+  <!-- Script for check online/offline  -->
+<script type="text/javascript">
+  function CheckConnectionStatus()
+  {
+    if(navigator.onLine)
+    {}
+    else
+    {alert("Please Connect to Internet !!!")
+      window.close();
+    }
+  }
+</script>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 2nd Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Content of start.html</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .alert {
+      padding: 20px;
+      background-color: #04AA6D;
+      color: white;
+    }
+    
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .closebtn:hover {
+      color: black;
+    }
+    #icon
+    {color: #ffffff;font-size: 25px;float: right;padding: 20px;}
+    #icon:active
+      {transform: scale(0.98);color: gray;}
+  </style>
+  </head>
+<body style="background-image:url('174642.jpg');">
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <strong>Congratulations!</strong> Your account has been created sucessfully.
+  </div>
+  <i class="fa-solid fa-cart-shopping" id="icon"></i>
+
+  <!-- I T E M S -->  
+  <footer id="footer">
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white-900">Products</h1>
+              <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+            </div>
+
+            <div class="flex flex-wrap -m-4">
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg" src="https://www.amazon.in/s?k=laptops&i=computers&adgrpid=55758224341&ext_vrnc=hi&hvadid=398124413243&hvdev=c&hvlocphy=9146445&hvnetw=g&hvqmt=e&hvrand=5743051182894639592&hvtargid=kwd-322776831257&hydadcr=26945_2178281&tag=googinhydr1-21&ref=pd_sl_2997yrtw3g_e" >
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <i class="fa-solid fa-laptop" style="color: #5d86cc; border-radius: 44%;"></i>  
+                    </svg>
+                  </div>
+                  <h2 class="text-lg font-medium title-font mb-2"style="color: #ab7bff;"><a href="star2.html">Laptops</a></h2>
+                  <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                </div>
+              </div>
+            
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <circle cx="6" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg font-medium title-font mb-2" style="color: crimson;" >Gaming Computer</h2>
+                  <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg font-medium title-font mb-2" style="color: greenyellow;" >TV</h2>
+                  <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg font-medium title-font mb-2" style="color: goldenrod;" >Earpods</h2>
+                  <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg font-medium title-font mb-2" style="color: lightblue;">Watches</h2>
+                  <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="border border-gray-200 p-6 rounded-lg">
+                  <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-lg font-medium title-font mb-2" style="color: aqua;">Speakers</h2>
+                  <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button> -->
+          </div>
+        </section>
+      </footer>
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 3rd Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  
+  <style>
+      #price
+      {
+        color: rgb(252, 96, 6);
+        font-size: 23px;
+        left: 405px;
+        top: 400px;
+        position: absolute;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      #button
+      {
+        background-color:rgba(102,126,234,var(--bg-opacity));
+        color:rgba(255,255,255,var(--text-opacity));
+        border-radius: 5px;
+      }
+      #button:active
+      {
+        transform: scale(0.98);   
+        background-color: gray;
+      }
+      #buynow
+      {
+        background-color: #959595;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        color: whitesmoke;
+      }
+      #buynow:active
+      {
+        transform: scale(0.98);    
+        background-color:gray;
+        color: whitesmoke;
+      }
+      #icon
+      {color: rgb(0, 0, 0);font-size: 25px;float: right;padding: 20px;}
+      #icon:active
+      {transform: scale(0.98);color: gray;}
+    </style>
+  </head>
+<body>
+  <form name="f1" method="get" action="cart.p"></form>
+      <!-- L A P T O P'S -->
+    <i name="cart" class="fa-solid fa-cart-shopping" id="icon"></i>   
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">Laptops That Bring Out the Best In You</h1>
+      <p id="lg:w-2/3 mx-auto leading-relaxed text-base">While tablets and smartphones are still popular, most people agree that everything, from doing research for an assignment to playing hardcore games, works better on a laptop. It doesn't matter what your lifestyle is, there is always one for you.</p>
+    </div>
+
+    
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center., sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="Asus-X14-Space-Edition.webp">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900"><a href="assus zenbook.html">Asus ZenBook 14X Space Edition</a></h2>
+            <h3 class="text-gray-500 mb-3">Designed For The Space-Age</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">
+        </div>
+        </div>
+      </div>
+
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="Pavillion.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900"><a href="HP Pavillion.html">HP Pavilion Aero 2021</a></h2>
+            <h3 class="text-gray-500 mb-3">Portability Without Performance Sacrifices</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">          </div>
+        </div>
+      </div>
+
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="Lenovo_Legion_7_2021_COver.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">Lenovo Legion 7 2021</h2>
+            <h3 class="text-gray-500 mb-3">Delivering Total Perfection</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">          </div>
+        </div>
+      </div>
+
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="HP_Spetre_X360_Cover.webp">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">HP Spectre X360</h2>
+            <h3 class="text-gray-500 mb-3">Still Carrying The Bond Factor</h3>
+            <input type="submit" name="submit" value="Buy Now" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 " id="buynow">
+            <input type="submit" name="submit" value="Add to cart" id="button" class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 ">          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- LoginPage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page in HTML</title>
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+  <p style="background-color: red; font-size: large;">ayush bante nagra</p>
+    <form method="post" action="start1.html">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3 style="font-size: 24px;">Login in</h3>
+            <p>login with your email and password</p>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="email">Your email</label>
+            <input id="e1" type="text" placeholder="Enter Email" name="username" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="pswrd">Your password</label>
+            <input id="e2" type="password" placeholder="Enter Password" name="pswrd" required>
+
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox" name="remember" > Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+
+
+            <!-- Submit button -->
+            <button type="submit" id="b1" onclick="create()">Login</button >
+
+            <!-- Sign up link -->
+            <p class="register">Not a member? <a href="#" onclick="window.location.href='Home.html'">Register here!</a></p>
+
+        </div>
+
+    </form>
+
+    <!-- javascript -->
+<div id="email" style="color: red;background-color: transparent;position: absolute;bottom: 9%;left: 142px;font-family: monospace;"></div>
+    <script type="text/javascript">
+    
+        function create()
+       {
+         var e=document.getElementById("e1").value;
+         var email_val=/\S+@\S+\.\S+/;
+         if(!email_val.test(e))
+         {
+           document.getElementById("email").innerHTML = "Please enter valid email.";
+         }
+         
+       }
+     </script>
+</body>
+</html>
+
